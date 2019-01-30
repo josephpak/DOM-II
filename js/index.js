@@ -61,3 +61,18 @@ navLinks.forEach(element => element.addEventListener("click", e => {
     e.preventDefault();
 }))
 
+const buttons = document.querySelectorAll(".btn")
+
+buttons.forEach(element => element.addEventListener("mouseout", e => {
+    TweenMax.to(e.currentTarget, 1, {
+        width:200,
+        ease:Bounce.easeOut
+    });
+}))
+
+buttons.forEach(element => element.addEventListener("mouseover", e => {
+    TweenMax.to(e.currentTarget, 1, {
+        width:150,
+        ease:Bounce.easeOut
+    });
+}))
